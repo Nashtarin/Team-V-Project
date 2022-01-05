@@ -22,8 +22,8 @@ const Contact = () => {
 
 
     return (
-        <div>
-            <h1>Send Email for contact</h1>
+        <div className='mx-auto' style={{height:"350px",width:"45%",border:'2px solid #0080ff',backgroundColor: '#80bfff', borderRadius: '20px'}}>
+            <h1 className='text-primary mt-3'>Send Email for contact</h1>
             <form ref={form} onSubmit={sendEmail}>
 
                 <input style={{ width: '340px', margin: '10px' }} type="text" name="user_name" placeholder="Your Name" required /><br />
@@ -32,7 +32,7 @@ const Contact = () => {
 
                 <textarea style={{ width: '340px', margin: '10px' }} name="message" placeholder="Message" /><br />
                 {/* <input type="submit" value="Send" /> */}
-                <button type="submit" style={{ padding: '10px', border: "2px solid blue", borderRadius: "15px", backgroundColor: "green" }}> Send</button>
+                <button type="submit" style={{ color:"white",width:'90px', padding: '7px', border: "2px solid blue", borderRadius: "15px", backgroundColor: "blue" }}> Send</button>
             </form>
         </div>
     );

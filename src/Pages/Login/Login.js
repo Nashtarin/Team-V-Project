@@ -1,8 +1,10 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import logo from '../../images/logoST.png'
 
 
 
@@ -21,14 +23,18 @@ const Login = () => {
         <div className='container'>
 
             <div className="row">
-                <div className="col-lg-4"></div>
-                <div className="col-lg-4">
-                    <div style={{ width: '340px', paddingTop: '150px', backgroundColor: '#c6c6c6', borderRadius: '5px', height: '350px', textAlign: 'center' }}>
+            <div className="col-lg-4"></div>
 
-                        <button onClick={() => signInWithGoogle(location, history)}> Please Google Sign</button>
+                <div className="col-lg-4 col-sm-12">
+                    <div style={{ width: '340px', padding: '70px', backgroundColor: '#80bfff', borderRadius: '20px', height: '300px', textAlign: 'center',border:'2px solid #0080ff' }}>
+                        <img className="mx-auto" style={{ width: "230px", height: "120px" }} src={logo} alt="" />
+
+                        <Button className='mt-4 fw-bold' variant="primary" onClick={() => signInWithGoogle(location, history)}>Google Sign In</Button>
+                        
                     </div>
                 </div>
                 <div className="col-lg-4"></div>
+
             </div>
 
 

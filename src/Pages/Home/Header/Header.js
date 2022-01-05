@@ -97,7 +97,7 @@ const Header = () => {
 
 
                                 {user.email ? <div><span>{user.displayName}  </span><Button onClick={logOut} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button></div> :
-                                    <Link to='/login'><Button className='me-3' style={{ backgroundColor: 'purple' }}>Login</Button></Link>}
+                                    <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>}
 
                             </Nav>
 
