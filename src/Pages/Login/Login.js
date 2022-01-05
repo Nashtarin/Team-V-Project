@@ -36,7 +36,7 @@ const Login = () => {
                 const user = result.user;
                 dispatch(signInWithGoogleSuccess(user));
 
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/home';
                 history.replace(destination);
 
                 // setAuthError('');

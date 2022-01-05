@@ -121,8 +121,16 @@ const Header = () => {
                                 {/* <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button> */}
                                 {/* {user?.isLogged && <div><span>{}  </span>< */}
 
-                                <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button> 
+                             { isLogged===true && <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button>} 
                                     <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>
+                                    
+                       {/* { isLogged === 'true' && <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button>}
+                       { isLogged !== 'true' && <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>} */}
+                       {/* {
+                        isLogged === 'true' && <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button>
+                        isLogged !== 'true' && <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>
+                    }
+                     */}
 
                             </Nav>
 
