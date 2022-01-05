@@ -25,7 +25,7 @@ const Login = () => {
                 <div className="col-lg-4">
                     <div style={{ width: '340px', paddingTop: '150px', backgroundColor: '#c6c6c6', borderRadius: '5px', height: '350px', textAlign: 'center' }}>
 
-                        <button onClick={() => signInWithGoogle(location, history)}>Google Sign</button>
+                        <button onClick={() => signInWithGoogle(location, history)}> Please Google Sign</button>
                     </div>
                 </div>
                 <div className="col-lg-4"></div>
