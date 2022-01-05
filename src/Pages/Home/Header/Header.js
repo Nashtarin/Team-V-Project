@@ -116,10 +116,13 @@ const Header = () => {
                                 } */}
                                 {/* <Nav.Link ><Link to='/aboutus'>About Us</Link></Nav.Link> */}
 
-                                <button onClick={handleSignOutWithGoogle}>Sign out</button>
+                                {/* <button onClick={handleSignOutWithGoogle}>Sign out</button> */}
 
-                                {/* {user.email ? <div><span>{user.displayName}  </span><Button onClick={logOut} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button></div> : */}
-                                    <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>}
+                                {/* <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button> */}
+                                {/* {user?.isLogged && <div><span>{}  </span>< */}
+
+                                <Button onClick={handleSignOutWithGoogle} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button> 
+                                    <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>
 
                             </Nav>
 

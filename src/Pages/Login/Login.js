@@ -62,8 +62,8 @@ const Login = () => {
                     <div style={{ width: '340px', padding: '70px', backgroundColor: '#80bfff', borderRadius: '20px', height: '300px', textAlign: 'center',border:'2px solid #0080ff' }}>
                         <img className="mx-auto" style={{ width: "230px", height: "120px" }} src={logo} alt="" />
 
-                        <Button className='mt-4 fw-bold' variant="primary" onClick={() => signInWithGoogle(location, history)}>Google Sign In</Button>
-                        <button onClick={handleGoogleSignIn}>Google Sign</button>
+                        {/* <Button className='mt-4 fw-bold' variant="primary" onClick={() => signInWithGoogle(location, history)}>Google Sign In</Button> */}
+                        <Button className='mt-4 fw-bold' variant="primary" onClick={()=>handleGoogleSignIn(location, history)}>Google Sign In</Button>
                         
                     </div>
                 </div>

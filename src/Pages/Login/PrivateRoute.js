@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import { useSelector } from 'react-redux';
 
 const PrivateRoute = ({ children, ...rest }) => {
 
