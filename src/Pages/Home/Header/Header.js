@@ -69,7 +69,7 @@ const Header = () => {
     return (
         <div className='d-flex justify-content-between'>
 
-            <img className="me-5" style={{ height: "120px", width: "200px" }} src={logo} alt="" />
+            <img className="me-5" style={{marginLeft:"35px",marginTop:"20px", height: "120px", width: "200px" }} src={logo} alt="" />
 
 
 
