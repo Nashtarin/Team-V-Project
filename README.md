@@ -1,6 +1,6 @@
 
 
-[Live Site Of ST Blogs](https://stblogs.netlify.app/).
+[Live Site Of ST Blogs](https://team-v-project.netlify.app/).
 
 
 # ST Blogs
