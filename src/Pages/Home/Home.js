@@ -22,18 +22,18 @@ const Home = (props) => {
         <div className="mt-5 container">
 
             <div className="row">
-                <div className="col-lg-4" style={{ border: '2px solid green', paddingTop: '30px' }}>
-                    <Link style={{ textDecoration: 'none' }} to={`${url}/createpost`}><button style={{ border: '2px solid green', color: 'gold', backgroundColor: '#419041', borderRadius: '3px', marginBottom: '15px' }} >Create Post</button></Link> <br />
+                <div className="col-lg-4" style={{ border: '2px solid royalblue',backgroundColor: '#80bfff', borderRadius: '20px', paddingTop: '30px',height:"250px",width:"200px",marginRight:"40px"}}>
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/createpost`}><button style={{ border: '2px solid  #00334d', color: ' navy', backgroundColor: ' #0099e6', borderRadius: '3px', marginBottom: '15px' }} >Create Post</button></Link> <br />
 
-                    <Link style={{ textDecoration: 'none' }} to={`${url}/allblogs`}><button style={{ border: '2px solid green', color: 'gold', backgroundColor: '#419041', borderRadius: '3px', marginBottom: '15px' }} >All Blogs</button></Link><br />
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/allblogs`}><button style={{ border: '2px solid  #00334d', color: ' navy', backgroundColor: ' #0099e6', borderRadius: '3px', marginBottom: '15px' }} >All Blogs</button></Link><br />
 
-                    <Link style={{ textDecoration: 'none' }} to={`${url}/myblogs`}><button style={{ border: '2px solid green', color: 'gold', backgroundColor: '#419041', borderRadius: '3px', marginBottom: '15px' }} >My Blogs</button></Link><br />
-                    <Link style={{ textDecoration: 'none' }} to={`${url}/aboutme`}><button style={{ border: '2px solid green', color: 'gold', backgroundColor: '#419041', borderRadius: '3px', marginBottom: '15px' }} >About Me</button></Link><br />
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/myblogs`}><button style={{ border: '2px solid  #00334d', color: ' navy', backgroundColor: ' #0099e6', borderRadius: '3px', marginBottom: '15px' }} >My Blogs</button></Link><br />
+                    <Link style={{ textDecoration: 'none' }} to={`${url}/aboutme`}><button style={{ border: '2px solid  #00334d', color: ' navy', backgroundColor: ' #0099e6', borderRadius: '3px', marginBottom: '15px' }} >About Me</button></Link><br />
 
 
 
                 </div>
-                <div className="col-lg-8" style={{ border: '2px solid green' }}>
+                <div className="col-lg-8" style={{ border: '2px solid  #0077b3' }}>
 
                     <Switch>
                         <PrivateRoute exact path={path}>

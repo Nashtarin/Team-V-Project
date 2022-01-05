@@ -25,21 +25,27 @@ const SingleBlog = (props) => {
         }
 
     }
+    const handleUpdate=(id)=>{
+
+    }
     console.log(props);
     return (
         <div>
-            <div className="row" style={{ paddingBottom: '5px', border: '2px solid black', marginBottom: '5px' }}>
+            <div className="row" style={{margin:'3px', padding: '7px', border: '2px solid #0088cc', marginBottom: '5px' ,borderRadius:'25px'}}>
                 <div className="col-lg-5" style={{}}>
-                    <img style={{ textAlign: 'start', width: '270px', height: '240px' }} src={blog.img} alt="no image" />
+                    <img style={{borderRadius:"15px", textAlign: 'start', width: '200px', height: '210px' }} src={blog.img} alt="" />
 
                 </div>
                 <div className="col-lg-7" style={{ textAlign: 'start' }}>
 
                     <h6>Title: {blog.name}</h6>
                     <small style={{ fontSize: '13px' }}>Posted:{blog?.postDate}</small>
-                    <p>jjj:{blog.description}</p>
+                    <p>Description:{blog.description}</p>
                     {
-                        (own === 'true') ? <button style={{ backgroundColor: 'red', color: 'white', padding: '10px', borderRadius: '5px' }} onClick={() => handleDelete(blog._id)}>Delete</button> : <p></p>
+                        (own === 'true') ? <button style={{ backgroundColor: 'red', color: 'white', padding: '7px', borderRadius: '5px',marginRight:"17px" }} onClick={() => handleDelete(blog._id)}>Delete</button> : <p></p>
+                    }
+                    {
+                        (own === 'true') ? <button style={{ backgroundColor: 'green', color: 'white', padding: '7px', borderRadius: '5px' }} onClick={() => handleUpdate(blog._id)}>Update</button> : <p></p>
                     }
                 </div>
             </div>

@@ -15,7 +15,7 @@ const AllBlogPosts = () => {
 
     return (
         <div>
-            <h1>All Blogs</h1>
+            <h1 className='text-primary m-2'>All Blogs</h1>
             {
                 blogs.map(blog => <SingleBlog blog={blog} own={''}></SingleBlog>)
             }

@@ -6,15 +6,15 @@ const AboutMe = () => {
     const { user } = useAuth();
     console.log(user);
     return (
-        <div>
+        <div >
 
 
 
 
-            <img style={{ textAlign: 'start', width: '270px', height: '240px' }} src={user.photoURL} alt="no image" />
+            <img className='mt-3' style={{ textAlign: 'start', width: '270px', height: '240px' }} src={user.photoURL} alt="" />
 
-            <p>Name: {user.displayName}</p>
-            <p>Email: {user.email}</p>
+            <p className='text-primary fw-bold'>Name: {user.displayName}</p>
+            <p  className='text-primary fw-bold'>Email: {user.email}</p>
 
 
 

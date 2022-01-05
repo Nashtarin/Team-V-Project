@@ -54,7 +54,7 @@ const AddPost = () => {
     }
     return (
         <div>
-            <h2>New Post</h2>
+            <h2 className='text-primary'>New Post</h2>
             <div className="container adding-form">
                 <form onSubmit={handleAddUser}>
                     <input type="text" ref={nameRef} placeholder="Post Title" required /> <br />
@@ -63,7 +63,7 @@ const AddPost = () => {
                     <textarea name="message" className="" ref={descriptionRef} placeholder="Content Description" required></textarea>
 
 
-                    <br /><button className="btn btn-danger" type="submit">Create</button>
+                    <br /><button className="btn btn-primary fw-bold" type="submit">Create</button>
                 </form>
             </div>
 
