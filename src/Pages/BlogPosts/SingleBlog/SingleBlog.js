@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const SingleBlog = (props) => {
 
-    const { blog, own } = props;
+    const { blog, own,useEmail } = props;
     const history = useHistory();
 
     const handleDelete = (id) => {
@@ -39,6 +39,7 @@ const SingleBlog = (props) => {
                 <div className="col-lg-7" style={{ textAlign: 'start' }}>
 
                     <h6>Title: {blog.name}</h6>
+                    <p>Posted by {blog.useEmail}  </p>
                     <small style={{ fontSize: '13px' }}>Posted:{blog?.postDate}</small>
                     <p>Description:{blog.description}</p>
                     {

@@ -55,16 +55,38 @@
 // };
 
 // export default Header;
+import { getAuth, signOut } from 'firebase/auth';
 import React from 'react';
 import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import { useDispatch } from 'react-redux';
+
+import { useSelector } from 'react-redux';
 
 import logo from '../../../images/logoST.png'
+import { signInWithGoogleFailed, signOutWithGoogle } from '../../../redux/actions/signIn';
 import '../Header/Header.css'
 
 const Header = () => {
-    const { user, logOut } = useAuth()
+ 
+    const auth = getAuth();
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user?.user);
+    const isLogged = useSelector(state => state.user?.isLogged);
+
+
+    const handleSignOutWithGoogle = () => {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            dispatch(signOutWithGoogle());
+        }).catch((error) => {
+            // An error happened.
+            // dispatch(signInWithGoogleFailed(error.message));
+            dispatch(signInWithGoogleFailed(error.message));
+        })
+        // .finally(() => setIsLoading(false));
+    }
 
     return (
         <div className='d-flex justify-content-between'>
@@ -94,9 +116,9 @@ const Header = () => {
                                 } */}
                                 {/* <Nav.Link ><Link to='/aboutus'>About Us</Link></Nav.Link> */}
 
+                                <button onClick={handleSignOutWithGoogle}>Sign out</button>
 
-
-                                {user.email ? <div><span>{user.displayName}  </span><Button onClick={logOut} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button></div> :
+                                {/* {user.email ? <div><span>{user.displayName}  </span><Button onClick={logOut} style={{ backgroundColor: "gray" }} className='me-3 text-white fw-bold'>Logout</Button></div> : */}
                                     <Link to='/login'><Button className='me-3' style={{ backgroundColor: '#006bb3' }}>Login</Button></Link>}
 
                             </Nav>
